@@ -76,6 +76,7 @@ The system integrates two complementary algorithms:
 
 ## 📁 Repository Structure
 
+```
 ├── scripts/
 │   └── motion_planner.lua    Main Lua control script
 ├── docs/
@@ -87,6 +88,7 @@ The system integrates two complementary algorithms:
 │       └── 03_final_target.png
 ├── README.md
 └── LICENSE
+```
 
 ## 🚀 How to Run
 
