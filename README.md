@@ -29,17 +29,34 @@ The system integrates two complementary algorithms:
 
 ## 📸 Visual Execution
 
-### Initial Configuration
+### 🏗️ CoppeliaSim Scene Setup
+
+![Scene Hierarchy](demo/images/00_scene_hierarchy.png)
+
+**Scene Components:**
+- 🤖 **7-DOF Redundant Manipulator** (`redundantRobot`)
+- 🎯 **4 Target Points** (`target1`, `target2`, `target3`, `target4`)
+- 🚧 **4 Obstacles** (`obstacle1`, `obstacle2`, `obstacle3`, `obstacle4`)
+- 🌐 **Floor plane** (collision geometry)
+- 📦 **Hierarchical joint structure** (7 revolute joints)
+
+### 1️⃣ Initial Configuration
+
 ![Initial Configuration](demo/images/01_initial_config.png)
-*7-DOF manipulator at simulation start with obstacles*
 
-### Obstacle Avoidance
+*7-DOF manipulator at simulation start with obstacles arranged in the environment.*
+
+### 2️⃣ Obstacle Avoidance in Progress
+
 ![Obstacle Avoidance](demo/images/02_obstacle_avoidance.png)
-*Manipulator navigating around obstacles to reach target 2*
 
-### Final Target
+*Manipulator navigating around obstacles to reach target 2 using OMPL RRTConnect planning.*
+
+### 3️⃣ Successful Target Achievement
+
 ![Final Target](demo/images/03_final_target.png)
-*Manipulator successfully reaching the final target position*
+
+*Manipulator successfully reaching the final target position after collision-free planning.*
 
 ## ✨ Key Features
 
@@ -77,15 +94,21 @@ The system integrates two complementary algorithms:
 ## 📁 Repository Structure
 
 ```
+robot-motion-planning-coppeliasim/
+│
 ├── scripts/
-│   └── motion_planner.lua    Main Lua control script
+│   └── motion_planner.lua          # Main Lua control script
+│
 ├── docs/
-│   └── motion_planning_report.pdf
+│   └── motion_planning_report.pdf  # Technical report (9 pages)
+│
 ├── demo/
 │   └── images/
-│       ├── 01_initial_config.png
-│       ├── 02_obstacle_avoidance.png
-│       └── 03_final_target.png
+│       ├── 00_scene_hierarchy.png  # CoppeliaSim scene setup
+│       ├── 01_initial_config.png   # Starting position
+│       ├── 02_obstacle_avoidance.png  # Mid-execution
+│       └── 03_final_target.png     # Goal reached
+│
 ├── README.md
 └── LICENSE
 ```
@@ -151,7 +174,9 @@ This project demonstrates:
 
 Check out my other robotics projects:
 
-🚗 **[Autonomous Vehicle Perception System (Quanser QCar)](https://github.com/SarathKumarKomathukattil/autonomous-vehicle-perception-quanser-qcar)** - End-to-end perception system with YOLOv8, ENet, and multi-sensor fusion.
+🚗 **[Autonomous Vehicle Perception System (Quanser QCar)](https://github.com/SarathKumarKomathukattil/autonomous-vehicle-perception-quanser-qcar)** - End-to-end perception with YOLOv8, ENet, and multi-sensor fusion.
+
+🚶 **[ROS2 Wall-Following Robot](https://github.com/SarathKumarKomathukattil/ros2-wall-following-robot)** - ROS2 Topics, Services, Actions with custom interfaces - Real hardware tested via The Construct AI.
 
 ## 📜 License
 
